@@ -110,7 +110,7 @@ main{
     grid-template-columns: repeat(4 , 1fr);
 }
 .social-links:hover>a:not(:hover){
-    transform: scale(0.8);
+    transform: scale(0.9);
     /* opacity: 0; */
 }
 .social-links>a{
