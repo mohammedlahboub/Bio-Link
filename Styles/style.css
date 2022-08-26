@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 img,
 video,
@@ -13,7 +13,7 @@ iframe {
 }
 body{
     width: 100vw; 
-    height: 100vh;
+    min-height: 100vh;
     background-color: #000;
     display: flex;
     align-items: center;
@@ -25,18 +25,27 @@ main{
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 0.7rem;
     background-color: #000;
-    padding: 3rem 1rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    padding: 1rem 1rem 1rem;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+
     border-radius: 0.8em;
     gap: 0.5em;
 }
-
+/* Page 1 */
+.Page-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
+}
+.Page-heading{
+    color: #fff;
+}
 .profile{
     background-color: rgb(212, 235, 255);
-    padding: 0.7em 0.5em;
+    padding: 1.2em 0.5em 0.7em;
     border-radius: 0.5em;
     flex-direction: column;
     display: flex;
@@ -47,14 +56,15 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: #fff; */
+    /* background-color: #000; */
     border-radius: 1.5em;
-    max-width: 9em;
+    max-width: 7em;
     /* min-width: 4em; */
 }
 .profile-img{
-    border-radius: 1.5em;
-    /* border: rgb(255, 255, 255) 0.25em solid; */
+    width: 100%;
+    border-radius: 10%;
+    outline: #000 0.25em solid;
 }
 .profile-name{
     font-weight: 700;
@@ -95,6 +105,10 @@ main{
     padding: 0.2em;
     border-radius: 0.7em;
     background-color: black;
+    transition: all ease-in-out 100ms;
+}
+.social-link:hover{
+    transform: translateY(0.3em);
 }
 .Twitter:hover>svg>path:not(:hover){
     fill: #1DA1F2;
@@ -103,7 +117,8 @@ main{
 .Twitter:hover>svg>path:hover{
     fill: #1DA1F2    ;
     
-}.Github:hover>svg>path:not(:hover){
+}
+.Github:hover>svg>path:not(:hover){
     fill: #000;
     cursor: pointer;
 }
@@ -113,7 +128,7 @@ main{
 }
 .Github:hover{
     background-color: #fff;
-    outline: 0.1em solid gray;
+    /* outline: 0.1em solid black; */
 }
 .Linkedin:hover>svg>path:not(:hover){
     fill: #0072b1;
@@ -132,11 +147,61 @@ main{
 
     
 }
-.link-preview{
+
+/* Page-2 */
+.Page-2{
+    width: 100%;
     
-    padding: 0.5em;
-    background-color: rgb(212, 235, 255);
+    grid-template-columns: 1fr;
+   
+    gap: 0.5em;
 }
+.Page-2-heading{
+    color: #fff;
+    margin-block-end: 0.4em;
+}
+/* Preview Card : */
+.link-preview{
+    border-radius: 0.5em;
+    padding: 0.5em;
+    gap: 0.5em;
+    background-color: rgb(212, 235, 255);
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+
+}
+.preview-img{
+    grid-row: span 4;
+    background-color: #000;
+    border-radius: 0.4em;
+}
+.preview-desc{
+    grid-row: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.desc-author{
+    width: 2em;
+    border-radius: 50%;
+}
+.desc-more-info{
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 700;
+    border-radius: 0.5em;
+    text-decoration: none;
+    padding-inline:calc(0.5em/2) ;
+    background-color:#000;
+    padding-block:calc(0.5em/2) ;
+}
+
+
+
+
+
+
 
 /* ####################################################### */
 @media (min-width:300px) {
@@ -152,6 +217,8 @@ main{
 @media (min-width:800px) {
     main{
         font-size: 1.2rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 3em;
     }
 }
 @media (min-width:1200px) {
