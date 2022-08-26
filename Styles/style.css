@@ -3,81 +3,97 @@
     padding: 0;
     box-sizing: border-box;
 }
-img,
-video,
-svg,
-iframe {
+:root{
+    --clr-bg:#000;
+    --clr-secondary-bg:#ffffff;
+    --clr-main-text:#000;
+    --clr-main-accent:#d4ebff;
+    --clr-secondary-text:#fff;
+    --clr-bg-icons:#000;
+    --clr-twitter-icon:#1DA1F2;
+    --clr-linkedin-icon:#0072b1;
+    --card-b-r:0.5em;
+
+}
+img, video, svg, iframe{
     display: block;
-  max-inline-size: 100%;
-  block-size: auto;
+    max-inline-size: 100%;
+    block-size: auto;
+}
+/* display flex */
+.flex{
+    display: flex;
+}
+/* display flex ; align-items : center ; justify-content:center ; */
+.f-c-c{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* display flex ; align-items : flex-start ; justify-content:center ; */
+.f-s-c{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+/* flex direction column */
+.f-d-c{
+    flex-direction: column;
+}
+/* display grid */
+.grid{
+    display: grid;
+}
+.black-select::selection{
+    background-color: var(--clr-bg);
+    color: #fff;
 }
 body{
     width: 100vw; 
     min-height: 100vh;
-    background-color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    background-color: var(--clr-bg);
 }
 
 main{
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 0.7rem;
-    background-color: #000;
-    padding: 1rem 1rem 1rem;
-    
-    display: grid;
+    background-color: var(--clr-bg);
+    padding: 1rem;
     grid-template-columns: 1fr;
+    border-radius: 0.8evar(--card-b-r);
+}
 
-    border-radius: 0.8em;
-    gap: 0.5em;
-}
 /* Page 1 */
+
 .Page-1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.5em;
+    gap: var(--card-b-r);
 }
+
 .Page-heading{
-    color: #fff;
+    color: var(--clr-secondary-text);
 }
+/* Profile Card  */
 .profile{
-    background-color: rgb(212, 235, 255);
+    background-color: var(--clr-main-accent);
     padding: 1.2em 0.5em 0.7em;
-    border-radius: 0.5em;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: var(--card-b-r);
 }
+
 .profile-img-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: #000; */
-    border-radius: 1.5em;
     max-width: 7em;
-    /* min-width: 4em; */
 }
+
 .profile-img{
     width: 100%;
     border-radius: 10%;
-    outline: #000 0.25em solid;
+    outline: var(--clr-bg) 0.25em solid;
 }
 .profile-name{
     font-weight: 700;
     font-size: 1em;
-    display:flex ;
-    align-items: center;
-    justify-content: center;
     gap: 0.2em;
 }
-.black-select::selection{
-    background-color: rgb(0, 0, 0);
-    color: #fff;
-}
+
 .username{
     margin-top: -0.5em;
     font-size: 1.2em;
@@ -85,87 +101,79 @@ main{
     color: rgb(110, 110, 110);
 }
 
-
+/* Social Media Links */
 .social-links{
     background-color:rgb(212, 235, 255);
-    border-radius: 0.5em;
-    padding: 0.5em;
-    gap: 0.5em;
-    display: grid;
+    border-radius: var(--card-b-r);
+    padding: var(--card-b-r);
+    gap: var(--card-b-r);
     grid-template-columns: repeat(4 , 1fr);
-
-
 }
-.social-links h2{
-    text-align: center;
-    font-size: 1.3em;
-    grid-column: span 4;
-}
+
 .social-link{
     padding: 0.2em;
-    border-radius: 0.7em;
-    background-color: black;
+    border-radius: 0.4em;
+    background-color: var(--clr-bg-icons);
     transition: all ease-in-out 100ms;
 }
+
 .social-link:hover{
     transform: translateY(0.3em);
-}
-.Twitter:hover>svg>path:not(:hover){
-    fill: #1DA1F2;
     cursor: pointer;
+}
+/* twitter link */
+.Twitter:hover>svg>path:not(:hover){
+    fill: var(--clr-twitter-icon);
 }
 .Twitter:hover>svg>path:hover{
-    fill: #1DA1F2    ;
+    fill: var(--clr-twitter-icon)    ;
     
 }
+/* github link */
 .Github:hover>svg>path:not(:hover){
-    fill: #000;
-    cursor: pointer;
+    fill: var(--clr-bg-icons);
 }
 .Github:hover>svg>path:hover{
-    fill: #000;
+    fill:var(--clr-bg-icons) ;
     
 }
 .Github:hover{
-    background-color: #fff;
-    /* outline: 0.1em solid black; */
+    background-color: var(--clr-secondary-bg);
 }
+/* linkedin link */
 .Linkedin:hover>svg>path:not(:hover){
-    fill: #0072b1;
-    cursor: pointer;
+    fill: var(--clr-linkedin-icon);
 }
 .Linkedin:hover>svg>path:hover{
-    fill: #0072b1;
+    fill: var(--clr-linkedin-icon);
     
-}.Instagram:hover>svg>path:not(:hover){
+}
+/* instagram */
+.Instagram:hover>svg>path:not(:hover){
     fill: url(#instagram-svg);
 
-    cursor: pointer;
 }
 .Instagram:hover>svg>path:hover{
-    fill: url(#instagram-svg);
+    fill: url(#instagram-svg); 
 
-    
 }
 
-/* Page-2 */
+/* Page-2 Latest Work */
 .Page-2{
     width: 100%;
-    
     grid-template-columns: 1fr;
-   
-    gap: 0.5em;
+    gap: var(--card-b-r);
 }
 .Page-2-heading{
-    color: #fff;
+    color: var(--clr-secondary-text);
     margin-block-end: 0.4em;
 }
 /* Preview Card : */
 .link-preview{
-    border-radius: 0.5em;
-    padding: 0.5em;
-    gap: 0.5em;
-    background-color: rgb(212, 235, 255);
+    border-radius: var(--card-b-r);
+    padding: var(--card-b-r);
+    gap: var(--card-b-r);
+    background-color: var(--clr-main-accent);
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     width: 100%;
@@ -173,13 +181,12 @@ main{
 }
 .preview-img{
     grid-row: span 4;
-    background-color: #000;
+    background-color: var(--clr-bg);
     border-radius: 0.4em;
 }
 .preview-desc{
-    grid-row: 5;
-    display: flex;
-    align-items: center;
+    opacity: 0; /* To Undo */
+    grid-row-start: 5;
     justify-content: space-between;
 }
 .desc-author{
@@ -187,21 +194,15 @@ main{
     border-radius: 50%;
 }
 .desc-more-info{
-    color: #fff;
+    color: var(--clr-secondary-text);
     font-size: 0.9em;
     font-weight: 700;
-    border-radius: 0.5em;
+    border-radius: var(--card-b-r);
     text-decoration: none;
-    padding-inline:calc(0.5em/2) ;
-    background-color:#000;
-    padding-block:calc(0.5em/2) ;
+    padding-inline:calc(var(--card-b-r)/2) ;
+    background-color:var(--clr-bg);
+    padding-block:calc(var(--card-b-r)/2) ;
 }
-
-
-
-
-
-
 
 /* ####################################################### */
 @media (min-width:300px) {
