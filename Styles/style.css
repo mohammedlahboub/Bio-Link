@@ -109,7 +109,13 @@ main{
     gap: var(--card-b-r);
     grid-template-columns: repeat(4 , 1fr);
 }
-
+.social-links:hover>a:not(:hover){
+    transform: scale(0.8);
+    /* opacity: 0; */
+}
+.social-links>a{
+    transition: all 200ms ease-in-out;
+}
 .social-link{
     padding: 0.2em;
     border-radius: 0.4em;
