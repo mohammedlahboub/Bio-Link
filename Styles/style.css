@@ -217,19 +217,24 @@ main{
     }
 }
 @media (min-width:500px) {
-    main{
-        font-size: 1rem;
-    }
+    /* main{
+        font-size: 0.9rem;
+    } */
 }
 @media (min-width:800px) {
     main{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         grid-template-columns: 1fr 1fr;
         gap: 3em;
     }
 }
 @media (min-width:1200px) {
     main{
-        font-size: 1.8rem;
+        font-size: 1.2rem;
+    }
+}
+@media (min-width:1700px) {
+    main{
+        font-size: 1.5rem;
     }
 }
