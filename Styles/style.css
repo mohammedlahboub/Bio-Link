@@ -147,6 +147,9 @@ main{
     background-color: var(--clr-secondary-bg);
 }
 /* linkedin link */
+.Linkedin{
+    opacity:50%;
+}
 .Linkedin:hover>svg>path:not(:hover){
     fill: var(--clr-linkedin-icon);
 }
