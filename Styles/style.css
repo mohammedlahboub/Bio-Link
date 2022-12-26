@@ -1,60 +1,72 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-:root{
-    --clr-bg:#000;
-    --clr-secondary-bg:#ffffff;
-    --clr-main-text:#000;
-    --clr-main-accent:#d4ebff;
-    --clr-secondary-text:#fff;
-    --clr-bg-icons:#000;
-    --clr-twitter-icon:#1DA1F2;
-    --clr-linkedin-icon:#0072b1;
-    --card-b-r:0.5em;
+
+:root {
+    --clr-bg: #000;
+    --clr-secondary-bg: #ffffff;
+    --clr-main-text: #000;
+    --clr-main-accent: #d4ebff;
+    --clr-secondary-text: #fff;
+    --clr-bg-icons: #000;
+    --clr-twitter-icon: #1DA1F2;
+    --clr-linkedin-icon: #0072b1;
+    --card-b-r: 0.5em;
 
 }
-img, video, svg, iframe{
+
+img,
+video,
+svg,
+iframe {
     display: block;
     max-inline-size: 100%;
     block-size: auto;
 }
+
 /* display flex */
-.flex{
+.flex {
     display: flex;
 }
+
 /* display flex ; align-items : center ; justify-content:center ; */
-.f-c-c{
+.f-c-c {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 /* display flex ; align-items : flex-start ; justify-content:center ; */
-.f-s-c{
+.f-s-c {
     display: flex;
     align-items: flex-start;
     justify-content: center;
 }
+
 /* flex direction column */
-.f-d-c{
+.f-d-c {
     flex-direction: column;
 }
+
 /* display grid */
-.grid{
+.grid {
     display: grid;
 }
-.black-select::selection{
+
+.black-select::selection {
     background-color: var(--clr-bg);
     color: #fff;
 }
-body{
-    width: 100vw; 
+
+body {
+    width: 100vw;
     min-height: 100vh;
     background-color: var(--clr-bg);
 }
 
-main{
+main {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 0.7rem;
     background-color: var(--clr-bg);
@@ -65,36 +77,38 @@ main{
 
 /* Page 1 */
 
-.Page-1{
+.Page-1 {
     gap: var(--card-b-r);
 }
 
-.Page-heading{
+.Page-heading {
     color: var(--clr-secondary-text);
 }
+
 /* Profile Card  */
-.profile{
+.profile {
     background-color: var(--clr-main-accent);
     padding: 1.2em 0.5em 0.7em;
     border-radius: var(--card-b-r);
 }
 
-.profile-img-container{
+.profile-img-container {
     max-width: 7em;
 }
 
-.profile-img{
+.profile-img {
     width: 100%;
     border-radius: 10%;
     outline: var(--clr-bg) 0.25em solid;
 }
-.profile-name{
+
+.profile-name {
     font-weight: 700;
     font-size: 1em;
     gap: 0.2em;
 }
 
-.username{
+.username {
     margin-top: -0.5em;
     font-size: 1.2em;
     font-weight: 700;
@@ -102,83 +116,98 @@ main{
 }
 
 /* Social Media Links */
-.social-links{
-    background-color:rgb(212, 235, 255);
+.social-links {
+    background-color: rgb(212, 235, 255);
     border-radius: var(--card-b-r);
     padding: var(--card-b-r);
     gap: var(--card-b-r);
-    grid-template-columns: repeat(4 , 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
-.social-links:hover>a:not(:hover){
+
+.social-links:hover>a:not(:hover) {
     transform: scale(0.9);
     /* opacity: 0; */
 }
-.social-links>a{
-    transition: all 200ms ease-in-out;
-}
-.social-link{
-    padding: 0.2em;
-    border-radius: 0.4em;
-    background-color: var(--clr-bg-icons);
-    transition: all ease-in-out 100ms;
+
+.social-links>a {
+    transition: transform 200ms ease-in-out;
 }
 
-.social-link:hover{
+.social-link {
+    padding: 0.2em;
+    border-radius: 0.4em;
+    transition: transform ease-in-out 100ms;
+    background-color: var(--clr-bg-icons);
+}
+
+.social-link:hover {
     transform: translateY(0.3em);
     cursor: pointer;
 }
+
 /* twitter link */
-.Twitter:hover>svg>path:not(:hover){
+.Twitter:hover>svg>path:not(:hover) {
     fill: var(--clr-twitter-icon);
 }
-.Twitter:hover>svg>path:hover{
-    fill: var(--clr-twitter-icon)    ;
-    
+
+.Twitter:hover>svg>path:hover {
+    fill: var(--clr-twitter-icon);
+
 }
+
 /* github link */
-.Github:hover>svg>path:not(:hover){
+.Github:hover>svg>path:not(:hover) {
     fill: var(--clr-bg-icons);
 }
-.Github:hover>svg>path:hover{
-    fill:var(--clr-bg-icons) ;
-    
+
+.Github:hover>svg>path:hover {
+    fill: var(--clr-bg-icons);
+
 }
-.Github:hover{
+
+.Github:hover {
     background-color: var(--clr-secondary-bg);
 }
+
 /* linkedin link */
-.Linkedin{
-    opacity:50%;
+.Linkedin {
+    opacity: 50%;
 }
-.Linkedin:hover>svg>path:not(:hover){
+
+.Linkedin:hover>svg>path:not(:hover) {
     fill: var(--clr-linkedin-icon);
 }
-.Linkedin:hover>svg>path:hover{
+
+.Linkedin:hover>svg>path:hover {
     fill: var(--clr-linkedin-icon);
-    
+
 }
+
 /* instagram */
-.Instagram:hover>svg>path:not(:hover){
+.Instagram:hover>svg>path:not(:hover) {
     fill: url(#instagram-svg);
 
 }
-.Instagram:hover>svg>path:hover{
-    fill: url(#instagram-svg); 
+
+.Instagram:hover>svg>path:hover {
+    fill: url(#instagram-svg);
 
 }
 
 /* Page-2 Latest Work */
-.Page-2{
+.Page-2 {
     width: 100%;
     grid-template-columns: 1fr;
     gap: var(--card-b-r);
 }
-.Page-2-heading{
+
+.Page-2-heading {
     color: var(--clr-secondary-text);
     margin-block-end: 0.4em;
 }
+
 /* Preview Card : */
-.link-preview{
+.link-preview {
     border-radius: var(--card-b-r);
     padding: var(--card-b-r);
     gap: var(--card-b-r);
@@ -188,56 +217,65 @@ main{
     width: 100%;
 
 }
-.preview-img{
+
+.preview-img {
     grid-row: span 4;
     background-color: var(--clr-bg);
     border-radius: 0.4em;
 }
-.preview-desc{
-    opacity: 0; /* To Undo */
+
+.preview-desc {
+    opacity: 0;
+    /* To Undo */
     grid-row-start: 5;
     justify-content: space-between;
 }
-.desc-author{
+
+.desc-author {
     width: 2em;
     border-radius: 50%;
 }
-.desc-more-info{
+
+.desc-more-info {
     color: var(--clr-secondary-text);
     font-size: 0.9em;
     font-weight: 700;
     border-radius: var(--card-b-r);
     text-decoration: none;
-    padding-inline:calc(var(--card-b-r)/2) ;
-    background-color:var(--clr-bg);
-    padding-block:calc(var(--card-b-r)/2) ;
+    padding-inline: calc(var(--card-b-r)/2);
+    background-color: var(--clr-bg);
+    padding-block: calc(var(--card-b-r)/2);
 }
 
 /* ####################################################### */
 @media (min-width:300px) {
-    main{
+    main {
         font-size: 0.9rem;
     }
 }
+
 @media (min-width:500px) {
     /* main{
         font-size: 0.9rem;
     } */
 }
+
 @media (min-width:800px) {
-    main{
+    main {
         font-size: 1.1rem;
-        grid-template-columns: 1fr 1fr;
-        gap: 3em;
+        /* grid-template-columns: 1fr 1fr;
+        gap: 3em; */
     }
 }
+
 @media (min-width:1200px) {
-    main{
+    main {
         font-size: 1.2rem;
     }
 }
+
 @media (min-width:1700px) {
-    main{
+    main {
         font-size: 1.5rem;
     }
 }
