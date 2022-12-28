@@ -145,6 +145,10 @@ main {
     cursor: pointer;
 }
 
+.Twitter {
+    opacity: 0.5;
+}
+
 /* twitter link */
 .Twitter:hover>svg>path:not(:hover) {
     fill: var(--clr-twitter-icon);
@@ -156,23 +160,23 @@ main {
 }
 
 /* github link */
-.Github:hover>svg>path:not(:hover) {
+/* .Github:hover>svg>path:not(:hover) {
     fill: var(--clr-bg-icons);
 }
 
 .Github:hover>svg>path:hover {
     fill: var(--clr-bg-icons);
 
-}
+} */
 
-.Github:hover {
+/* .Github:hover {
     background-color: var(--clr-secondary-bg);
-}
+} */
 
 /* linkedin link */
-.Linkedin {
+/* .Linkedin {
     opacity: 50%;
-}
+} */
 
 .Linkedin:hover>svg>path:not(:hover) {
     fill: var(--clr-linkedin-icon);
